@@ -1,0 +1,31 @@
+# Prevent Directory Browsing
+Options -Indexes
+
+# Allow Execution Only for .php Files
+<FilesMatch "\.php$">
+    SetHandler application/x-httpd-php
+</FilesMatch>
+
+# Allow Access Only to Specific File Types
+<FilesMatch "\.(jpg|jpeg|png|gif|pdf|txt|docx|doc|xlsx|xls|pptx|ppt|odt|ods|odp|rtf|zip|rar|csv|json|xml)(\.txt)?$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch>
+
+# Force all other files to be served as plain text
+<FilesMatch ".*">
+    ForceType text/plain
+    SetHandler none
+</FilesMatch>
+
+# Deny Access to .expire Files (these are used internally)
+<FilesMatch "\.expire$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Block Access to .htaccess and Other Sensitive Files
+<FilesMatch "^\.">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
