@@ -4,13 +4,13 @@ This repository contains a collection of small applications for PHP web hosting,
 
 Use-cases for these apps are:
 1. You are building a startup and don't have millions in funding to use a cloud platform.
-2. You want to host your own web apps on DreamHost or any other PHP hosting platform.
+2. You just want to be like [Pieter Levels](https://www.youtube.com/watch?v=oFtjKbXKqbg&t) and focus on results not coolness.
 3. You want to learn how to build web apps on PHP and use them on dreamhost like platforms.
 
 ## Applications
 
 1. **filestore-api** - DreamHost doesn't provide a simple way to store files on their platform. This API provides an easy way to upload and download files from your own server. Does file expiration using cron job.
-2. **Calendly like app** - Coming soon.
+2. **Calendly like app** - calendar.
 
 ## Getting Started
 
@@ -26,4 +26,4 @@ We welcome contributions from the community. If you have an idea for a new appli
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LINK_TO_LICENSE_FILE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
