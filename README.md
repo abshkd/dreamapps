@@ -10,7 +10,7 @@ Use-cases for these apps are:
 ## Applications
 
 1. **filestore-api** - DreamHost doesn't provide a simple way to store files on their platform. This API provides an easy way to upload and download files from your own server. Does file expiration using cron job.
-2. **Calendly like app** - calendar.
+2. **calendar-passkey** - calendly (coming soon), currently broken.
 
 ## Getting Started
 

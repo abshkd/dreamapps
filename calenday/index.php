@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Self-Hosted Calendar App</title>
+    <title>Self-Hosted Calendar App - Login & Register</title>
     <link rel="stylesheet" href="assets/styles.css">
     <script src="assets/app.js" defer></script>
 </head>
@@ -13,12 +13,9 @@
 
     <div id="auth-container">
         <h2>Login / Register</h2>
-        <form id="register-form">
+        <form id="auth-form">
             <input type="text" id="username" placeholder="Username" required>
             <button type="button" id="register-button">Register with Passkey</button>
-        </form>
-        <form id="login-form">
-            <input type="text" id="username-login" placeholder="Username" required>
             <button type="button" id="login-button">Login with Passkey</button>
         </form>
     </div>

@@ -1,9 +1,6 @@
 <?php
-require_once 'config.php';
 
-use Webauthn\PublicKeyCredentialCreationOptions;
-use Webauthn\PublicKeyCredentialRequestOptions;
-use Webauthn\PublicKeyCredentialSourceRepository;
+require_once 'config.php';
 
 class Auth
 {
@@ -29,6 +26,20 @@ class Auth
         $stmt->bindParam(':username', $username);
         $stmt->bindParam(':credential_id', $credentialId);
         $stmt->execute();
-        return $stmt->fetch(PDO::FETCH_ASSOC);
+        return $stmt->fetch(PDO::FETCH_ASSOC) !== false;
+    }
+
+    public function getUserCredentialId($username)
+    {
+        $stmt = $this->db->prepare("SELECT credential_id FROM users WHERE username = :username");
+        $stmt->bindParam(':username', $username);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($result) {
+            return $result['credential_id'];
+        } else {
+            throw new Exception("User not found or credential ID not set.");
+        }
     }
 }

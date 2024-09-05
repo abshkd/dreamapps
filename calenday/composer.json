@@ -1,5 +1,5 @@
 {
-  "name": "yourusername/self-hosted-calendar-app",
+  "name": "abshkd/dreamapps",
   "description": "A self-hosted, Calendly-like calendar app with passkey-based authentication using PHP and SQLite.",
   "type": "project",
   "license": "MIT",
@@ -9,11 +9,12 @@
       "email": "spankmyspam@gmail.com"
     }
   ],
-  "require": {
+   "require": {
     "php": ">=7.4",
-    "webauthn/webauthn-lib": "^3.2",
+    "web-auth/webauthn-lib": "^3.3",
     "guzzlehttp/guzzle": "^7.0",
-    "vlucas/phpdotenv": "^5.4"
+    "vlucas/phpdotenv": "^5.4",
+    "spomky-labs/base64url": "^2.0"
   },
   "autoload": {
     "psr-4": {

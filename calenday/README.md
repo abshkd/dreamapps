@@ -24,6 +24,7 @@ Follow these steps to set up the project locally or on a server.
 ### 1. Clone the Repository
 
 You ned to ensure paths match whatever setup is in your webhost.
+Sample .htaccess file is for dreamhost.
 ```bash
 git clone ...
 cd calenday
